@@ -1,0 +1,31 @@
+.container{
+    width: auto;
+    margin-left: 116px;
+    margin-right: 116px;
+    max-width: 1440px;
+    header{
+        div{
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+    .hero{
+        h1{
+            font-size: 64px;
+            color: teal;
+        }
+    }
+    .footer{
+        &-image{
+            a{
+                font-size: 24px;
+            }
+        }
+        &-footer-title{
+            a, p{
+                font-size: 32px;
+            }
+        }
+    }
+}
