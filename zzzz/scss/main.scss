@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap");
+
+$font-stack: Fraunces, serif;
+$primary-color: #576f72;
+$secondary-color: #7d9d9c;
+$third-color: #e4dccf;
+$fourth-color: #f0ebe3;
+
+$black: #494949;
+$white: #ffffff;
+$gray: #bcbcbc;
+
+$white-gray: #ededed;
+
+body {
+  font: 100% $font-stack;
+  color: $black;
+}
+
+// TYPOGRAPHY
+// ==================================================//
+$base-heading-size: 16px;
+$heading-scale: 8;
+$base-font-size: 16px;
+$font-scale: 2;
+
+.title-component{
+  color: $primary-color;
+}
+
+h1 {
+  font-size: $base-heading-size + $heading-scale * 9.25;
+  font-style: italic;
+  font-weight: 457;
+  letter-spacing: 0em;
+  font-variation-settings: "SOFT" 50, "WONK" 0.51;
+}
+
+.sub-heading {
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 0em;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+}
+.sub-heading-second{
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 0em;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+}
+
+@for $i from 2 through 6 {
+  h#{$i} {
+    font-size: $base-heading-size + $heading-scale * (6 - $i);
+  }
+}
+@for $i from 1 through 6 {
+  .body-text-#{$i} {
+    font-size: $base-font-size + $font-scale * (6 - $i);
+  }
+}
+
+hr{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+// COLOR
+
+.color {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & &-primary {
+    background-color: $primary-color;
+    width: 200px;
+    height: 200px;
+  }
+  & &-secondary {
+    background-color: $secondary-color;
+    width: 200px;
+    height: 200px;
+  }
+  & &-third {
+    background-color: $third-color;
+    width: 200px;
+    height: 200px;
+  }
+  & &-fourth {
+    background-color: $fourth-color;
+    width: 200px;
+    height: 200px;
+  }
+  & &-black {
+    background-color: $black;
+    width: 200px;
+    height: 200px;
+  }
+  & &-white {
+    background-color: $white;
+    width: 200px;
+    height: 200px;
+    border: 2px solid $black;
+  }
+  & &-gray {
+    background-color: $gray;
+    width: 200px;
+    height: 200px;
+  }
+  & &-gray-white {
+    background-color: $white-gray;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+//Homepage
+// CONTAINER
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1, 5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm,
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.themed-container {
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+//Homepage
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 46px;
+  margin-bottom: 46px;
+  & &-image{
+    
+  }
+  & &-content{
+    display: flex;
+    gap: 32px;
+    .active{
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
+  & &-button{
+
+  }
+}
+.hero{
+  display: flex;
+  padding-top: 60px;
+  & &-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .hero-title{
+      p{
+        margin-bottom: 6px;
+        color: $secondary-color
+      }
+      h1{
+        margin-bottom: 32px;
+        color: $primary-color;
+      }
+    }
+
+    .hero-image{
+      img{
+        width: 576px;
+        height: 432px;
+      }
+    }
+  }
+}
