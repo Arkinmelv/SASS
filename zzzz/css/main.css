@@ -206,7 +206,6 @@ hr {
   color: #576f72;
 }
 .hero {
-  display: flex;
   padding-top: 60px;
 }
 .hero .hero-content {
