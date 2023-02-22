@@ -17,18 +17,24 @@ let startup = {
 console.log(startup.fullDec());
 console.log(startup.owner)
 // alert(startup.description)
+console.log("=================")
 
+//declar object startup to new object
 const OnlineStartup = Object.keys(startup)
 console.log(OnlineStartup)
+console.log("=================")
 
-//keys is function
-// 
+//keys is function asli dari javascript untuk mengabungkan method lama ke baru
+console.log("inter")
 
 const inter = Object.values(startup)
 console.log(inter)
+console.log("=================")
+console.log("external")
 
 const external = Object.entries(startup)
 console.log(external)
+console.log("=================")
 
 // Object.defineProperties
 // Object.defineProperty
@@ -55,7 +61,7 @@ console.log('=================Batas===================')
 //Mengambil piring paling atas untuk memudahkan saat mau eksekusi
 // Jadi nanti akan take data dari atas dulu 
 // fungsinya untuk mempermudah akses datanya 
-// dan bais nya sepeti itu 
+// dan baris nya sepeti itu 
 // TRY
 
 function createStack(){
@@ -66,6 +72,7 @@ function createStack(){
         // Membuat Method
         // Return strucktur data object yang bisa menerima fungsi 
         // Method = push, pop, lenght
+
         // push 
 
         name : 'your name',
@@ -101,9 +108,8 @@ function createStack(){
 
 // }
 
-// Impementasi Membuat Rak buku
+// Impementasi Membuat aquarium ikan
 const aquariumStack = createStack();
-
 
 console.log('=================1===================')
 // [PUSH] Menambah isi dari array kosong 
@@ -114,7 +120,7 @@ aquariumStack.push('Cupang');
 // [PEEK] Method yang dinamai sendiri dan di dalam method mereturn/mengembalikan nilai masukan
 // atau (lenght) dari sebuahd data.
 console.log('Aquarium yang bisa di tampilkan = ' + aquariumStack.peek())
-console.log(aquariumStack.nameInvander())
+// console.log(aquariumStack.nameInvander())
 
 
 console.log('=================2===================')

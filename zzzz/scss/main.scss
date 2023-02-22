@@ -12,10 +12,6 @@ $gray: #bcbcbc;
 
 $white-gray: #ededed;
 
-body {
-  font: 100% $font-stack;
-  color: $black;
-}
 
 // TYPOGRAPHY
 // ==================================================//
@@ -24,6 +20,10 @@ $heading-scale: 8;
 $base-font-size: 16px;
 $font-scale: 2;
 
+body {
+  font: 100% $font-stack;
+  color: $black;
+}
 .title-component{
   color: $primary-color;
 }
@@ -191,8 +191,7 @@ hr{
   justify-content: space-between;
   margin-top: 46px;
   margin-bottom: 46px;
-  & &-image{
-    
+  & &-image{  
   }
   & &-content{
     display: flex;

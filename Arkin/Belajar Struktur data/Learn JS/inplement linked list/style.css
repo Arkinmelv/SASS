@@ -1,0 +1,139 @@
+body{
+  
+  
+    overflow-y: hidden;}
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.discoball {
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: hue;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  
+  background: lightgrey;
+  border-radius: 180px;
+  /*border: 0px solid #fff;*/
+  height: 180px;
+  width: 180px;
+  margin-top: 21px;
+    margin-left: 44.5%;
+  box-shadow: 0 3px 180px -3px #fff;
+}
+.discoball img {
+  height: 180px;
+  width: 180px;
+}
+.hanger {
+  background: black;
+  width: 1px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 50px;
+  margin-left: 50%;
+  top: 0;
+  position: absolute;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+     
+    
+}
+
+/* ***   global classes ****** */
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.down-margin {
+  margin-bottom: 25px;
+}
+
+.right-margin {
+  margin-right: 15px;
+}
+
+.icon-color {
+  color: white;
+}
+
+/* *** global classes end */
+
+.outer-wrapper {
+  /*margin: 10px;*/
+  width: 400px;
+  height: 418px;
+  background-color: #243441;
+    margin-top: 3.5%;
+    margin-left: 38%;
+    position:sticky;
+    justify-content: center;
+    
+}
+
+.music-player-wrapper {
+  margin: 10px;
+  height: 400px;
+  width: 400px;
+  border: 3px solid #21282c;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+/* styling for music information */
+
+.music-info-wrapper {
+  flex: 1;
+  width: 100%;
+}
+
+.music-info {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* styling for music icons */
+
+.music-icons-wrapper {
+  width: 100%;
+}
+
+/* next pre play pause styling */
+.music-icons {
+  justify-content: space-around;
+}
+
+.play-pause-btn-wrapper i {
+  color: white;
+  cursor: pointer;
+}
+
+/* previous and next btn */
+.previous-btn-wrapper {
+  cursor: pointer;
+}
+
+.next-btn-wrapper {
+  cursor: pointer;
+}
