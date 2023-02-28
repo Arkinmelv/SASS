@@ -75,8 +75,25 @@ h6 {
 }
 
 hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 70px;
+  margin-bottom: 32px;
+}
+
+button {
+  border-radius: 40px;
+  height: 62px;
+  width: 195px;
+  text-align: center;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Fraunces;
+  background: #576f72;
+  color: #ffffff;
+}
+button:hover {
+  background-color: #7d9d9c;
+  color: #ededed;
 }
 
 .color {
@@ -194,6 +211,7 @@ hr {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 46px;
   margin-bottom: 46px;
 }
@@ -224,4 +242,47 @@ hr {
 .hero .hero-content .hero-image img {
   width: 576px;
   height: 432px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  background-color: #576f72;
+  padding: 70px;
+}
+.footer .footer-content h3 {
+  margin-top: 16px;
+  color: #ffffff;
+}
+.footer .footer-content h5 {
+  margin-top: 16px;
+  color: #bcbcbc;
+}
+.footer .footer-content button {
+  margin-top: 40px;
+  background-color: #ffffff;
+  color: #576f72;
+}
+.footer .footer-content .footer-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.footer .footer-content .footer-image p {
+  color: #ffffff;
+}
+.footer .footer-content .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.footer .footer-content .footer-bottom p {
+  color: #ffffff;
+}
+.footer .footer-content .footer-bottom .footer-sosmed {
+  display: flex;
+  gap: 16px;
 }/*# sourceMappingURL=main.css.map */

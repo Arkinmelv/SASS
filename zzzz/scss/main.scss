@@ -61,10 +61,27 @@ h1 {
 }
 
 hr{
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 70px;
+  margin-bottom: 32px;
 }
-
+// ===============================
+// Buttons
+button{
+	border-radius: 40px;
+  height: 62px;
+	width: 195px;  
+	text-align: center;
+	border: none;
+	font-size: 24px;
+	font-weight: 600;
+  font-family: Fraunces;
+  background: $primary-color;
+  color: $white;
+  &:hover{
+    background-color: $secondary-color;
+    color: $white-gray;
+  }
+}
 // COLOR
 
 .color {
@@ -185,10 +202,13 @@ hr{
 }
 
 
+
+
 //Homepage
 .navbar{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 46px;
   margin-bottom: 46px;
   & &-image{  
@@ -226,6 +246,52 @@ hr{
       img{
         width: 576px;
         height: 432px;
+      }
+    }
+  }
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  text-align: center; 
+  align-self: center;
+  background-color: $primary-color;
+  padding: 70px;
+  
+  & &-content{
+    h3{
+      margin-top: 16px;
+      color: $white;
+    }
+    h5{
+      margin-top: 16px;
+      color: $gray;
+    }
+    button{
+      margin-top: 40px;
+      background-color: $white;
+      color: $primary-color;
+    }
+    .footer-image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      p{
+        color: $white;
+      }
+    }
+    .footer-bottom{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      p{
+        color: $white;
+      }
+      .footer-sosmed{
+        display: flex;
+        gap: 16px;
       }
     }
   }
