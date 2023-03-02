@@ -12,7 +12,6 @@ $gray: #bcbcbc;
 
 $white-gray: #ededed;
 
-
 // TYPOGRAPHY
 // ==================================================//
 $base-heading-size: 16px;
@@ -24,16 +23,19 @@ body {
   font: 100% $font-stack;
   color: $black;
 }
-.title-component{
+.title-component {
   color: $primary-color;
 }
 
-h1 {
+.h1 {
   font-size: $base-heading-size + $heading-scale * 9.25;
   font-style: italic;
   font-weight: 457;
   letter-spacing: 0em;
   font-variation-settings: "SOFT" 50, "WONK" 0.51;
+}
+h1 {
+  font-size: 64px;
 }
 
 .sub-heading {
@@ -42,7 +44,7 @@ h1 {
   letter-spacing: 0em;
   font-variation-settings: "SOFT" 0, "WONK" 1;
 }
-.sub-heading-second{
+.sub-heading-second {
   font-size: 20px;
   font-style: italic;
   letter-spacing: 0em;
@@ -60,24 +62,24 @@ h1 {
   }
 }
 
-hr{
+hr {
   margin-top: 70px;
   margin-bottom: 32px;
 }
 // ===============================
 // Buttons
-button{
-	border-radius: 40px;
+button {
+  border-radius: 40px;
   height: 62px;
-	width: 195px;  
-	text-align: center;
-	border: none;
-	font-size: 24px;
-	font-weight: 600;
+  width: 195px;
+  text-align: center;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
   font-family: Fraunces;
   background: $primary-color;
   color: $white;
-  &:hover{
+  &:hover {
     background-color: $secondary-color;
     color: $white-gray;
   }
@@ -201,95 +203,235 @@ button{
   text-align: center;
 }
 
-
-
-
 //Homepage
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 46px;
   margin-bottom: 46px;
-  & &-image{  
+  & &-image {
   }
-  & &-content{
+  & &-content {
     display: flex;
     gap: 32px;
-    .active{
+    .active {
       font-weight: 700;
       color: $primary-color;
     }
   }
-  & &-button{
-
+  & &-button {
   }
 }
-.hero{
+.hero {
   padding-top: 60px;
-  & &-content{
+  & &-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .hero-title{
-      p{
+    .hero-title {
+      p {
         margin-bottom: 6px;
-        color: $secondary-color
+        color: $secondary-color;
       }
-      h1{
+      h1 {
         margin-bottom: 32px;
         color: $primary-color;
       }
     }
 
-    .hero-image{
-      img{
+    .hero-image {
+      img {
         width: 576px;
         height: 432px;
       }
     }
   }
 }
+.hero-content-first {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  .wrapper-content-one {
+    display: flex;
+    .title-content {
+      max-width: 70%;
+      h5,
+      h1 {
+        font-weight: 600;
+      }
+      h1 {
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .text-title {
+        color: $gray;
+        font-weight: 400;
+        margin-bottom: 24px;
+      }
+      .content-text {
+        color: $secondary-color;
+      }
+      .title-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        p {
+          font-weight: 600;
+          color: $primary-color;
+        }
+      }
+    }
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      .wrapper-card {
+        .card-profile {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 24px;
+          img {
+            width: 64px;
+            height: 64px;
+          }
+          .card-title {
+            .prfile-name {
+              font-weight: 600;
+            }
+            .profile-job {
+              color: $primary-color;
+            }
+          }
+        }
+        .desc-card{
+          color: $gray;
+        }
+      }
+    }
+  }
+  .wrapper-content-two {
+    margin-top: 70px;
+    .wrapper-image {
+      img {
+        width: 100%;
+        height: 348px;
+      }
+      .sosmed {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
 
-.footer{
+        position: absolute;
+        z-index: 1;
+        margin-left: 32px;
+        margin-top: -137px;
+        .sosmed-text {
+          p {
+            font-weight: 600;
+            color: $white;
+          }
+        }
+        .sosmed-image {
+          display: flex;
+          gap: 28px;
+          img {
+            width: 63px;
+            height: 63px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero-content-second{
+  display: flex;
+  flex-direction: column;
+  .wrapper-content-second {
+    // display: flex;
+    .title-content {
+      max-width: 70%;
+      h5,
+      h1 {
+        font-weight: 600;
+      }
+      h1 {
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .text-title {
+        color: $gray;
+        font-weight: 400;
+        margin-bottom: 24px;
+      }
+      .content-text {
+        color: $secondary-color;
+      }
+      .title-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        p {
+          font-weight: 600;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+.footer {
   display: flex;
   justify-content: center;
-  text-align: center; 
+  text-align: center;
   align-self: center;
   background-color: $primary-color;
   padding: 70px;
-  
-  & &-content{
-    h3{
+
+  & &-content {
+    h3 {
       margin-top: 16px;
       color: $white;
     }
-    h5{
+    h5 {
       margin-top: 16px;
       color: $gray;
     }
-    button{
+    button {
       margin-top: 40px;
       background-color: $white;
       color: $primary-color;
     }
-    .footer-image{
+    button:hover {
+      background-color: $secondary-color;
+      color: $white;
+    }
+    .footer-image {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 24px;
-      p{
+      p {
         color: $white;
       }
     }
-    .footer-bottom{
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
       margin-bottom: 32px;
-      p{
+      p {
         color: $white;
       }
-      .footer-sosmed{
+      .footer-sosmed {
         display: flex;
         gap: 16px;
       }

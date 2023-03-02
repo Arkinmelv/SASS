@@ -8,12 +8,16 @@ body {
   color: #576f72;
 }
 
-h1 {
+.h1 {
   font-size: 90px;
   font-style: italic;
   font-weight: 457;
   letter-spacing: 0em;
   font-variation-settings: "SOFT" 50, "WONK" 0.51;
+}
+
+h1 {
+  font-size: 64px;
 }
 
 .sub-heading {
@@ -244,6 +248,136 @@ button:hover {
   height: 432px;
 }
 
+.hero-content-first {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+}
+.hero-content-first .wrapper-content-one {
+  display: flex;
+}
+.hero-content-first .wrapper-content-one .title-content {
+  max-width: 70%;
+}
+.hero-content-first .wrapper-content-one .title-content h5,
+.hero-content-first .wrapper-content-one .title-content h1 {
+  font-weight: 600;
+}
+.hero-content-first .wrapper-content-one .title-content h1 {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.hero-content-first .wrapper-content-one .title-content .text-title {
+  color: #bcbcbc;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.hero-content-first .wrapper-content-one .title-content .content-text {
+  color: #7d9d9c;
+}
+.hero-content-first .wrapper-content-one .title-content .title-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-content-first .wrapper-content-one .title-content .title-button img {
+  width: 24px;
+  height: 24px;
+}
+.hero-content-first .wrapper-content-one .title-content .title-button p {
+  font-weight: 600;
+  color: #576f72;
+}
+.hero-content-first .wrapper-content-one .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.hero-content-first .wrapper-content-one .card-content .wrapper-card .card-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.hero-content-first .wrapper-content-one .card-content .wrapper-card .card-profile img {
+  width: 64px;
+  height: 64px;
+}
+.hero-content-first .wrapper-content-one .card-content .wrapper-card .card-profile .card-title .prfile-name {
+  font-weight: 600;
+}
+.hero-content-first .wrapper-content-one .card-content .wrapper-card .card-profile .card-title .profile-job {
+  color: #576f72;
+}
+.hero-content-first .wrapper-content-one .card-content .wrapper-card .desc-card {
+  color: #bcbcbc;
+}
+.hero-content-first .wrapper-content-two {
+  margin-top: 70px;
+}
+.hero-content-first .wrapper-content-two .wrapper-image img {
+  width: 100%;
+  height: 348px;
+}
+.hero-content-first .wrapper-content-two .wrapper-image .sosmed {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: absolute;
+  z-index: 1;
+  margin-left: 32px;
+  margin-top: -137px;
+}
+.hero-content-first .wrapper-content-two .wrapper-image .sosmed .sosmed-text p {
+  font-weight: 600;
+  color: #ffffff;
+}
+.hero-content-first .wrapper-content-two .wrapper-image .sosmed .sosmed-image {
+  display: flex;
+  gap: 28px;
+}
+.hero-content-first .wrapper-content-two .wrapper-image .sosmed .sosmed-image img {
+  width: 63px;
+  height: 63px;
+}
+
+.hero-content-second {
+  display: flex;
+  flex-direction: column;
+}
+.hero-content-second .wrapper-content-second .title-content {
+  max-width: 70%;
+}
+.hero-content-second .wrapper-content-second .title-content h5,
+.hero-content-second .wrapper-content-second .title-content h1 {
+  font-weight: 600;
+}
+.hero-content-second .wrapper-content-second .title-content h1 {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.hero-content-second .wrapper-content-second .title-content .text-title {
+  color: #bcbcbc;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.hero-content-second .wrapper-content-second .title-content .content-text {
+  color: #7d9d9c;
+}
+.hero-content-second .wrapper-content-second .title-content .title-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-content-second .wrapper-content-second .title-content .title-button img {
+  width: 24px;
+  height: 24px;
+}
+.hero-content-second .wrapper-content-second .title-content .title-button p {
+  font-weight: 600;
+  color: #576f72;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -264,6 +398,10 @@ button:hover {
   margin-top: 40px;
   background-color: #ffffff;
   color: #576f72;
+}
+.footer .footer-content button:hover {
+  background-color: #7d9d9c;
+  color: #ffffff;
 }
 .footer .footer-content .footer-image {
   display: flex;
