@@ -202,8 +202,7 @@ button {
 .text-center {
   text-align: center;
 }
-
-//Homepage
+// NAVBAR
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -220,16 +219,105 @@ button {
       color: $primary-color;
       text-decoration: underline;
     }
-    h5:hover{
+    h5:hover {
       font-weight: 700;
       color: $primary-color;
       text-decoration: underline;
-      
     }
   }
   & &-button {
   }
 }
+// FOOTER
+.footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  background-color: $primary-color;
+  padding: 70px;
+  margin-top: 120px;
+  & &-content {
+    h3 {
+      margin-top: 16px;
+      color: $white;
+    }
+    h5 {
+      margin-top: 16px;
+      color: $gray;
+    }
+    button {
+      margin-top: 40px;
+      background-color: $white;
+      color: $primary-color;
+    }
+    button:hover {
+      background-color: $secondary-color;
+      color: $white;
+    }
+    .footer-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      p {
+        color: $white;
+      }
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      p {
+        color: $white;
+      }
+      .footer-sosmed {
+        display: flex;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+//FORM
+.form{
+  width: 100%;
+	.form-label{
+		color: $black;
+	}
+  .form-control{
+		.form-label{
+			color: $black;
+      font-size: 20px;
+		}
+		input[type="text"], input[type="email"], input[type="password"],input[type="number"],
+		input{
+			border-radius: 6px;
+			padding: 10px 16px;
+			border: none;
+			width: 100%;
+			line-height: 46px;
+			box-sizing: border-box;
+			color: $black;
+			appearance: none;
+      background: $white-gray;
+      font-family: Fraunces, serif;
+      font-size: 20px;
+      margin-top: 8px;
+		}
+		input::placeholder{
+      font-size: 20px;
+			color: $gray;
+		}
+		input:focus{
+			border: 2.5px solid $primary-color;
+		}
+	}
+}
+
+
+
+//Homepage
 .hero {
   padding-top: 60px;
   & &-content {
@@ -316,7 +404,7 @@ button {
             }
           }
         }
-        .desc-card{
+        .desc-card {
           color: $gray;
         }
       }
@@ -357,7 +445,7 @@ button {
   }
 }
 
-.hero-content-second{
+.hero-content-second {
   display: flex;
   flex-direction: column;
   margin-top: 200px;
@@ -382,29 +470,29 @@ button {
       }
     }
   }
-  .wrapper-content-card{
+  .wrapper-content-card {
     margin-top: 90px;
-    hr{
+    hr {
       margin-top: 40px;
       margin-bottom: 40px;
       border: 2px $gray solid;
     }
-    .wrapper-card{
+    .wrapper-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      img{
+      img {
         width: 400px;
         height: 150px;
       }
-      h3{
+      h3 {
         font-weight: 700;
       }
     }
   }
 }
 
-.hero-content-third{
+.hero-content-third {
   display: flex;
   flex-direction: column;
   margin-top: 200px;
@@ -428,75 +516,143 @@ button {
         color: $secondary-color;
       }
     }
-    .wrapper-content-card{
+    .wrapper-content-card {
       margin-top: 125px;
-      .content-card{
+      .content-card {
         display: flex;
         // justify-content: space-between;
         gap: 24px;
-        img{
+        img {
           width: 386px;
           height: 386px;
         }
       }
     }
-    .button-content{
+    .button-content {
       display: flex;
       justify-content: center;
       margin-top: 100px;
-      button{
+      button {
         width: 291px;
       }
     }
   }
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-self: center;
-  background-color: $primary-color;
-  padding: 70px;
-  margin-top: 120px;
-  & &-content {
-    h3 {
-      margin-top: 16px;
-      color: $white;
-    }
+//Project
+//banner hero project
+.hero-banner-porto {
+  .text-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    //position
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 20vh;
     h5 {
-      margin-top: 16px;
-      color: $gray;
-    }
-    button {
-      margin-top: 40px;
-      background-color: $white;
-      color: $primary-color;
-    }
-    button:hover {
-      background-color: $secondary-color;
       color: $white;
     }
-    .footer-image {
+    h1 {
+      font-size: 100px;
+      font-weight: 600;
+      color: $white;
+      line-height: 123.3px;
+
+      margin-top: 32px;
+      margin-bottom: 32px;
+      .text-span {
+        color: #dcb21d;
+      }
+    }
+    h4 {
+      color: $gray;
+      font-style: italic;
+      line-height: 39px;
+    }
+  }
+  img {
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+.hero-content-project {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  .wrapper-content-project {
+    .title-content {
+      // max-width: 70%;
+      h5,
+      h1 {
+        font-weight: 600;
+      }
+      h1 {
+        margin-bottom: 16px;
+      }
+      .text-title {
+        color: $gray;
+        font-weight: 400;
+        margin-bottom: 24px;
+      }
+      .content-text {
+        color: $secondary-color;
+      }
+    }
+    .wrapper-content-card {
+      margin-top: 64px;
+      .content-card {
+        display: flex;
+        justify-content: start;
+        gap: 24px;
+        img {
+          width: 386px;
+          height: 386px;
+        }
+      }
+    }
+    .button-content {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 24px;
-      p {
-        color: $white;
-      }
-    }
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 32px;
-      p {
-        color: $white;
-      }
-      .footer-sosmed {
-        display: flex;
-        gap: 16px;
+      margin-top: 100px;
+      button {
+        width: 291px;
       }
     }
   }
 }
+
+
+
+//Contact
+.wrapper-contact{
+  margin-top: 100px;
+  .title-contact{
+    h2{
+      font-weight: 700;
+    }
+    p{
+      margin-top: 16px;
+      color: $gray;
+    }
+    .sosmed-image {
+      margin-top: 60px;
+      display: flex;
+      gap: 28px;
+      img {
+        width: 63px;
+        height: 63px;
+      }
+    }
+  }
+  .input-content{
+
+  }
+}
+
