@@ -226,6 +226,12 @@ button:hover {
 .navbar .navbar-content .active {
   font-weight: 700;
   color: #576f72;
+  text-decoration: underline;
+}
+.navbar .navbar-content h5:hover {
+  font-weight: 700;
+  color: #576f72;
+  text-decoration: underline;
 }
 .hero {
   padding-top: 60px;
@@ -344,6 +350,7 @@ button:hover {
 .hero-content-second {
   display: flex;
   flex-direction: column;
+  margin-top: 200px;
 }
 .hero-content-second .wrapper-content-second .title-content {
   max-width: 70%;
@@ -364,18 +371,69 @@ button:hover {
 .hero-content-second .wrapper-content-second .title-content .content-text {
   color: #7d9d9c;
 }
-.hero-content-second .wrapper-content-second .title-content .title-button {
+.hero-content-second .wrapper-content-card {
+  margin-top: 90px;
+}
+.hero-content-second .wrapper-content-card hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 2px #bcbcbc solid;
+}
+.hero-content-second .wrapper-content-card .wrapper-card {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
 }
-.hero-content-second .wrapper-content-second .title-content .title-button img {
-  width: 24px;
-  height: 24px;
+.hero-content-second .wrapper-content-card .wrapper-card img {
+  width: 400px;
+  height: 150px;
 }
-.hero-content-second .wrapper-content-second .title-content .title-button p {
+.hero-content-second .wrapper-content-card .wrapper-card h3 {
+  font-weight: 700;
+}
+
+.hero-content-third {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+}
+.hero-content-third .wrapper-content-third .title-content {
+  max-width: 70%;
+}
+.hero-content-third .wrapper-content-third .title-content h5,
+.hero-content-third .wrapper-content-third .title-content h1 {
   font-weight: 600;
-  color: #576f72;
+}
+.hero-content-third .wrapper-content-third .title-content h1 {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.hero-content-third .wrapper-content-third .title-content .text-title {
+  color: #bcbcbc;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.hero-content-third .wrapper-content-third .title-content .content-text {
+  color: #7d9d9c;
+}
+.hero-content-third .wrapper-content-third .wrapper-content-card {
+  margin-top: 125px;
+}
+.hero-content-third .wrapper-content-third .wrapper-content-card .content-card {
+  display: flex;
+  gap: 24px;
+}
+.hero-content-third .wrapper-content-third .wrapper-content-card .content-card img {
+  width: 386px;
+  height: 386px;
+}
+.hero-content-third .wrapper-content-third .button-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.hero-content-third .wrapper-content-third .button-content button {
+  width: 291px;
 }
 
 .footer {
@@ -385,6 +443,7 @@ button:hover {
   align-self: center;
   background-color: #576f72;
   padding: 70px;
+  margin-top: 120px;
 }
 .footer .footer-content h3 {
   margin-top: 16px;

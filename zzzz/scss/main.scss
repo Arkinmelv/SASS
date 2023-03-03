@@ -218,6 +218,13 @@ button {
     .active {
       font-weight: 700;
       color: $primary-color;
+      text-decoration: underline;
+    }
+    h5:hover{
+      font-weight: 700;
+      color: $primary-color;
+      text-decoration: underline;
+      
     }
   }
   & &-button {
@@ -353,8 +360,8 @@ button {
 .hero-content-second{
   display: flex;
   flex-direction: column;
+  margin-top: 200px;
   .wrapper-content-second {
-    // display: flex;
     .title-content {
       max-width: 70%;
       h5,
@@ -373,22 +380,77 @@ button {
       .content-text {
         color: $secondary-color;
       }
-      .title-button {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        img {
-          width: 24px;
-          height: 24px;
-        }
-        p {
-          font-weight: 600;
-          color: $primary-color;
-        }
+    }
+  }
+  .wrapper-content-card{
+    margin-top: 90px;
+    hr{
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border: 2px $gray solid;
+    }
+    .wrapper-card{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img{
+        width: 400px;
+        height: 150px;
+      }
+      h3{
+        font-weight: 700;
       }
     }
   }
 }
+
+.hero-content-third{
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  .wrapper-content-third {
+    .title-content {
+      max-width: 70%;
+      h5,
+      h1 {
+        font-weight: 600;
+      }
+      h1 {
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .text-title {
+        color: $gray;
+        font-weight: 400;
+        margin-bottom: 24px;
+      }
+      .content-text {
+        color: $secondary-color;
+      }
+    }
+    .wrapper-content-card{
+      margin-top: 125px;
+      .content-card{
+        display: flex;
+        // justify-content: space-between;
+        gap: 24px;
+        img{
+          width: 386px;
+          height: 386px;
+        }
+      }
+    }
+    .button-content{
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+      button{
+        width: 291px;
+      }
+    }
+  }
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -396,7 +458,7 @@ button {
   align-self: center;
   background-color: $primary-color;
   padding: 70px;
-
+  margin-top: 120px;
   & &-content {
     h3 {
       margin-top: 16px;
