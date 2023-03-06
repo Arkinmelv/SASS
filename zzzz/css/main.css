@@ -282,16 +282,24 @@ button:hover {
 }
 
 .form {
-  width: 100%;
+  margin-top: 100px;
 }
 .form .form-label {
   color: #494949;
+}
+.form .form-control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
 }
 .form .form-control .form-label {
   color: #494949;
   font-size: 20px;
 }
-.form .form-control input[type=text], .form .form-control input[type=email], .form .form-control input[type=password], .form .form-control input[type=number],
+.form .form-control input[type=text],
+.form .form-control input[type=email],
+.form .form-control input[type=password],
+.form .form-control input[type=number],
 .form .form-control input {
   border-radius: 6px;
   padding: 10px 16px;
@@ -318,6 +326,84 @@ button:hover {
 }
 .form .form-control input:focus {
   border: 2.5px solid #576f72;
+}
+.form .form-control textarea {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  color: #494949;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #ededed;
+  font-family: Fraunces, serif;
+  height: 200px;
+  margin-top: 8px;
+}
+.form .form-control textarea::-moz-placeholder {
+  font-size: 20px;
+  color: #bcbcbc;
+}
+.form .form-control textarea::placeholder {
+  font-size: 20px;
+  color: #bcbcbc;
+}
+.form .form-control textarea:focus {
+  border: 2.5px solid #576f72;
+}
+.form .form-control .inner-form {
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.form .form-control .inner-form span {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 26px;
+  font-size: 20px;
+}
+.form .form-control .inner-form span i img {
+  width: 32px;
+  height: 32px;
+  color: #576f72;
+}
+.form .form-control .inner-form.left-icon {
+  display: flex;
+  justify-content: end;
+}
+.form .form-control .inner-form.right-icon {
+  display: flex;
+  justify-content: start;
+}
+.form .form-control .inner-form .input-right-icon {
+  position: relative;
+  padding-left: 40px;
+}
+.form .form-control .inner-form .input-left-icon {
+  position: relative;
+  padding-right: 40px;
+  float: right;
+  width: 100%;
+}
+.form .button-form {
+  height: 62px;
+  width: 445px;
+  border-radius: 16px;
+  padding: 16px 32px 16px 32px;
+  margin-top: 64px;
+}
+
+.form-contact {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+.form-contact .form-control {
+  width: 50%;
 }
 
 .hero {
@@ -618,4 +704,11 @@ button:hover {
 .wrapper-contact .title-contact .sosmed-image img {
   width: 63px;
   height: 63px;
+}
+.splide {
+  margin-top: 64px;
+}
+.splide .splide__track .splide__list .splide__slide .splide__slide__container img {
+  width: 386px;
+  height: 386px;
 }/*# sourceMappingURL=main.css.map */

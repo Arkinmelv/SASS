@@ -280,42 +280,126 @@ button {
 }
 
 //FORM
-.form{
-  width: 100%;
-	.form-label{
-		color: $black;
-	}
-  .form-control{
-		.form-label{
-			color: $black;
+.form {
+  // width: 100%;
+  margin-top: 100px;
+  .form-label {
+    color: $black;
+  }
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+
+    .form-label {
+      color: $black;
       font-size: 20px;
-		}
-		input[type="text"], input[type="email"], input[type="password"],input[type="number"],
-		input{
-			border-radius: 6px;
-			padding: 10px 16px;
-			border: none;
-			width: 100%;
-			line-height: 46px;
-			box-sizing: border-box;
-			color: $black;
-			appearance: none;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input {
+      border-radius: 6px;
+      padding: 10px 16px;
+      border: none;
+      width: 100%;
+      line-height: 46px;
+      box-sizing: border-box;
+      color: $black;
+      appearance: none;
       background: $white-gray;
       font-family: Fraunces, serif;
       font-size: 20px;
       margin-top: 8px;
-		}
-		input::placeholder{
+    }
+    input::placeholder {
       font-size: 20px;
-			color: $gray;
-		}
-		input:focus{
-			border: 2.5px solid $primary-color;
-		}
-	}
+      color: $gray;
+    }
+    input:focus {
+      border: 2.5px solid $primary-color;
+    }
+
+    textarea {
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: none;
+      font-size: 20px;
+      color: $black;
+      appearance: none;
+      background: $white-gray;
+      font-family: Fraunces, serif;
+      height: 200px;
+      margin-top: 8px;
+    }
+    textarea::placeholder {
+      font-size: 20px;
+      color: $gray;
+    }
+    textarea:focus {
+      border: 2.5px solid $primary-color;
+    }
+    .inner-form {
+      flex-wrap: wrap;
+      align-items: stretch;
+      span {
+        z-index: 1;
+        position: absolute;
+        // width: 32px;
+
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 26px;
+        font-size: 20px;
+        i {
+          img {
+            width: 32px;
+            height: 32px;
+            color: $primary-color;
+          }
+        }
+      }
+      &.left-icon {
+        display: flex;
+        justify-content: end;
+      }
+      &.right-icon {
+        display: flex;
+        justify-content: start;
+      }
+      .input-right-icon {
+        position: relative;
+        padding-left: 40px;
+      }
+      .input-left-icon {
+        position: relative;
+        padding-right: 40px;
+        float: right;
+        width: 100%;
+      }
+    }
+  }
+  .button-form {
+    height: 62px;
+    width: 445px;
+    border-radius: 16px;
+    padding: 16px 32px 16px 32px;
+
+    margin-top: 64px;
+  }
 }
 
-
+.form-contact {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  .form-control {
+    width: 50%;
+  }
+}
 
 //Homepage
 .hero {
@@ -628,16 +712,14 @@ button {
   }
 }
 
-
-
 //Contact
-.wrapper-contact{
+.wrapper-contact {
   margin-top: 100px;
-  .title-contact{
-    h2{
+  .title-contact {
+    h2 {
       font-weight: 700;
     }
-    p{
+    p {
       margin-top: 16px;
       color: $gray;
     }
@@ -651,8 +733,22 @@ button {
       }
     }
   }
-  .input-content{
-
+  .input-content {
   }
 }
 
+.splide {
+  margin-top: 64px;
+  .splide__track {
+    .splide__list {
+      .splide__slide {
+        .splide__slide__container {
+          img {
+            width: 386px;
+            height: 386px;
+          }
+        }
+      }
+    }
+  }
+}
