@@ -1,7 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap");
-body {
-  font: 100% Fraunces, serif;
-  color: #494949;
+.container {
+  width: auto;
+  margin-left: 116px;
+  margin-right: 116px;
+  max-width: 1440px;
+}
+.container header div a {
+  font-size: 16px;
+}
+.container .hero h1 {
+  font-size: 64px;
+  color: teal;
+}
+.container .footer-image a {
+  font-size: 24px;
+}
+.container .footer-footer-title a, .container .footer-footer-title p {
+  font-size: 32px;
+}/*# sourceMappingURL=main.css.map */949;
 }
 
 .title-component {
@@ -233,6 +248,27 @@ button:hover {
   color: #576f72;
   text-decoration: underline;
 }
+@media (max-width: 480px) {
+  .navbar .navbar-content {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .navbar-content {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .navbar .navbar-button {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .navbar .navbar-button {
+    display: none;
+  }
+}
+
 .footer {
   display: flex;
   justify-content: center;

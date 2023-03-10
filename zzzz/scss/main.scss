@@ -12,6 +12,23 @@ $gray: #bcbcbc;
 
 $white-gray: #ededed;
 
+$bp : (
+  mobile : 480px,
+  tablet : 768px,
+  desktop : 1440px,
+);
+
+@mixin query($display){
+  @each $key, $value in $bp{
+    
+    //  defining max-width
+    @if ($display == $key){
+      @media (max-width: $value){@content;}
+    }
+  }
+}
+
+
 // TYPOGRAPHY
 // ==================================================//
 $base-heading-size: 16px;
@@ -209,6 +226,11 @@ button {
   align-items: center;
   margin-top: 46px;
   margin-bottom: 46px;
+
+  
+
+
+
   & &-image {
   }
   & &-content {
@@ -224,8 +246,20 @@ button {
       color: $primary-color;
       text-decoration: underline;
     }
+    @include query(mobile){
+      display: none;
+    }
+    @include query(tablet){
+      display: none;
+    }
   }
   & &-button {
+    @include query(mobile){
+      display: none;
+    }
+    @include query(tablet){
+      display: none;
+    }
   }
 }
 // FOOTER
@@ -737,6 +771,8 @@ button {
   }
 }
 
+
+//Slider Content
 .splide {
   margin-top: 64px;
   .splide__track {
@@ -752,3 +788,9 @@ button {
     }
   }
 }
+
+
+
+
+
+
