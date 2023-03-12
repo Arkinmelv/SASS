@@ -12,22 +12,22 @@ $gray: #bcbcbc;
 
 $white-gray: #ededed;
 
-$bp : (
-  mobile : 480px,
-  tablet : 768px,
-  desktop : 1440px,
+$bp: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1440px,
 );
 
-@mixin query($display){
-  @each $key, $value in $bp{
-    
+@mixin query($display) {
+  @each $key, $value in $bp {
     //  defining max-width
-    @if ($display == $key){
-      @media (max-width: $value){@content;}
+    @if ($display == $key) {
+      @media (max-width: $value) {
+        @content;
+      }
     }
   }
 }
-
 
 // TYPOGRAPHY
 // ==================================================//
@@ -227,10 +227,6 @@ button {
   margin-top: 46px;
   margin-bottom: 46px;
 
-  
-
-
-
   & &-image {
   }
   & &-content {
@@ -246,18 +242,18 @@ button {
       color: $primary-color;
       text-decoration: underline;
     }
-    @include query(mobile){
+    @include query(mobile) {
       display: none;
     }
-    @include query(tablet){
+    @include query(tablet) {
       display: none;
     }
   }
   & &-button {
-    @include query(mobile){
+    @include query(mobile) {
       display: none;
     }
-    @include query(tablet){
+    @include query(tablet) {
       display: none;
     }
   }
@@ -398,11 +394,11 @@ button {
       }
       &.left-icon {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
       }
       &.right-icon {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
       }
       .input-right-icon {
         position: relative;
@@ -727,7 +723,7 @@ button {
       margin-top: 64px;
       .content-card {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         gap: 24px;
         img {
           width: 386px;
@@ -771,7 +767,6 @@ button {
   }
 }
 
-
 //Slider Content
 .splide {
   margin-top: 64px;
@@ -789,8 +784,137 @@ button {
   }
 }
 
+// MAIN PROFILE
+.main-profile {
+  .profile-content {
+    .profile-banner {
+      img {
+        width: 100%;
+        height: 480px;
+      }
+    }
+    .profile-content-image {
+      display: flex;
+      .profile-photo {
+        position: absolute;
+        margin-top: -200px;
 
+        img {
+          width: 387px;
+          height: 387px;
+        }
+      }
+      .profile-name {
+        margin-top: 40px;
+        margin-left: 420px;
+        h2 {
+          margin-bottom: 8px;
+        }
+        .sosmed-image {
+          margin-top: 16px;
+          margin-bottom: 24px;
+          display: flex;
+          gap: 28px;
+          img {
+            width: 38px;
+            height: 38px;
+          }
+        }
+        .profile-button {
+        }
+      }
+    }
+  }
+  .profile-card {
+    margin-top: 64px;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    box-shadow: 4px 7px 8px 4px rgba(0, 0, 0, 0.25);
+    .container-card {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 64px;
+      padding-right: 64px;
+      .title-card {
+        font-weight: 600;
+      }
 
-
-
-
+      //about me
+      .text-card {
+        margin-top: 32px;
+        .text-about{
+          text-align: justify;
+        }
+      }
+      
+      //Penglamanan
+      .content-card-flex{
+        display: flex;
+        margin-top: 50px;
+        .image-content{
+          margin-right: 24px;
+          img{
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .text-content{
+          display: flex;
+          flex-direction: column;
+          h4{
+            font-weight: 600;
+          }
+          h5{
+            margin-top: 4px;
+          }
+          .body-text-4{
+            font-weight: 300;
+            margin-top: 8px;
+          }
+          .number{
+            font-weight: 400;
+          }
+          .desc-text{
+            margin-top: 32px;
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+            margin-left: 32px;
+            li{
+              font-weight: 300;
+            }
+          }
+          .link-project{
+            display: flex;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            p{
+              font-size: 20px;
+              color: $gray;
+            }
+            img{
+              width: 24px;
+              height: 24px;
+            }
+          }
+          .image-course{
+            display: flex;
+            gap: 32px;
+            .project-1{
+              img{
+                width: 166px;
+                height: 118px;
+              }
+            }
+          }
+        }  
+      }
+      hr{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 2px solid $gray;
+      }
+    }
+  }
+}

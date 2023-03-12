@@ -1,22 +1,7 @@
-.container {
-  width: auto;
-  margin-left: 116px;
-  margin-right: 116px;
-  max-width: 1440px;
-}
-.container header div a {
-  font-size: 16px;
-}
-.container .hero h1 {
-  font-size: 64px;
-  color: teal;
-}
-.container .footer-image a {
-  font-size: 24px;
-}
-.container .footer-footer-title a, .container .footer-footer-title p {
-  font-size: 32px;
-}/*# sourceMappingURL=main.css.map */949;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap");
+body {
+  font: 100% Fraunces, serif;
+  color: #494949;
 }
 
 .title-component {
@@ -344,17 +329,11 @@ button:hover {
   line-height: 46px;
   box-sizing: border-box;
   color: #494949;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: #ededed;
   font-family: Fraunces, serif;
   font-size: 20px;
   margin-top: 8px;
-}
-.form .form-control input::-moz-placeholder {
-  font-size: 20px;
-  color: #bcbcbc;
 }
 .form .form-control input::placeholder {
   font-size: 20px;
@@ -369,17 +348,11 @@ button:hover {
   border: none;
   font-size: 20px;
   color: #494949;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background: #ededed;
   font-family: Fraunces, serif;
   height: 200px;
   margin-top: 8px;
-}
-.form .form-control textarea::-moz-placeholder {
-  font-size: 20px;
-  color: #bcbcbc;
 }
 .form .form-control textarea::placeholder {
   font-size: 20px;
@@ -409,11 +382,11 @@ button:hover {
 }
 .form .form-control .inner-form.left-icon {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .form .form-control .inner-form.right-icon {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .form .form-control .inner-form .input-right-icon {
   position: relative;
@@ -706,7 +679,7 @@ button:hover {
 }
 .hero-content-project .wrapper-content-project .wrapper-content-card .content-card {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 24px;
 }
 .hero-content-project .wrapper-content-project .wrapper-content-card .content-card img {
@@ -747,4 +720,125 @@ button:hover {
 .splide .splide__track .splide__list .splide__slide .splide__slide__container img {
   width: 386px;
   height: 386px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.main-profile .profile-content .profile-banner img {
+  width: 100%;
+  height: 480px;
+}
+.main-profile .profile-content .profile-content-image {
+  display: flex;
+}
+.main-profile .profile-content .profile-content-image .profile-photo {
+  position: absolute;
+  margin-top: -200px;
+}
+.main-profile .profile-content .profile-content-image .profile-photo img {
+  width: 387px;
+  height: 387px;
+}
+.main-profile .profile-content .profile-content-image .profile-name {
+  margin-top: 40px;
+  margin-left: 420px;
+}
+.main-profile .profile-content .profile-content-image .profile-name h2 {
+  margin-bottom: 8px;
+}
+.main-profile .profile-content .profile-content-image .profile-name .sosmed-image {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 28px;
+}
+.main-profile .profile-content .profile-content-image .profile-name .sosmed-image img {
+  width: 38px;
+  height: 38px;
+}
+.main-profile .profile-card {
+  margin-top: 64px;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  box-shadow: 4px 7px 8px 4px rgba(0, 0, 0, 0.25);
+}
+.main-profile .profile-card .container-card {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+.main-profile .profile-card .container-card .title-card {
+  font-weight: 600;
+}
+.main-profile .profile-card .container-card .text-card {
+  margin-top: 32px;
+}
+.main-profile .profile-card .container-card .text-card .text-about {
+  text-align: justify;
+}
+.main-profile .profile-card .container-card .content-card-flex {
+  display: flex;
+  margin-top: 50px;
+}
+.main-profile .profile-card .container-card .content-card-flex .image-content {
+  margin-right: 24px;
+}
+.main-profile .profile-card .container-card .content-card-flex .image-content img {
+  width: 100px;
+  height: 100px;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content {
+  display: flex;
+  flex-direction: column;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content h4 {
+  font-weight: 600;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content h5 {
+  margin-top: 4px;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .body-text-4 {
+  font-weight: 300;
+  margin-top: 8px;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .number {
+  font-weight: 400;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .desc-text {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin-left: 32px;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .desc-text li {
+  font-weight: 300;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .link-project {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .link-project p {
+  font-size: 20px;
+  color: #bcbcbc;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .link-project img {
+  width: 24px;
+  height: 24px;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .image-course {
+  display: flex;
+  gap: 32px;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .image-course .project-1 img {
+  width: 166px;
+  height: 118px;
+}
+.main-profile .profile-card .container-card hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 2px solid #bcbcbc;
+}
+
+/*# sourceMappingURL=main.css.map */
