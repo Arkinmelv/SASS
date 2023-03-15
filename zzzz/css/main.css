@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap");
 body {
   font: 100% Fraunces, serif;
@@ -754,6 +755,24 @@ button:hover {
   width: 38px;
   height: 38px;
 }
+.main-profile .profile-content .profile-content-image .profile-name .profile-button {
+  display: flex;
+  gap: 24px;
+}
+.main-profile .profile-content .profile-content-image .profile-name .profile-button .button-icon button {
+  width: 236px;
+  height: 62px;
+  font-weight: 600;
+}
+.main-profile .profile-content .profile-content-image .profile-name .profile-button .button-icon .cv {
+  width: 295px;
+}
+.main-profile .profile-content .profile-content-image .profile-name .profile-button .button-icon .text-button {
+  border-radius: 8px;
+}
+.main-profile .profile-content .profile-content-image .profile-name .profile-button .button-icon .text-button img {
+  margin-right: 16px;
+}
 .main-profile .profile-card {
   margin-top: 64px;
   width: 100%;
@@ -801,6 +820,11 @@ button:hover {
   font-weight: 300;
   margin-top: 8px;
 }
+.main-profile .profile-card .container-card .content-card-flex .text-content .semi-bold {
+  font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
 .main-profile .profile-card .container-card .content-card-flex .text-content .number {
   font-weight: 400;
 }
@@ -822,8 +846,10 @@ button:hover {
 .main-profile .profile-card .container-card .content-card-flex .text-content .link-project p {
   font-size: 20px;
   color: #bcbcbc;
+  margin-right: 8px;
 }
 .main-profile .profile-card .container-card .content-card-flex .text-content .link-project img {
+  margin-top: 2px;
   width: 24px;
   height: 24px;
 }
@@ -831,14 +857,55 @@ button:hover {
   display: flex;
   gap: 32px;
 }
+.main-profile .profile-card .container-card .content-card-flex .text-content .image-course .project-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .main-profile .profile-card .container-card .content-card-flex .text-content .image-course .project-1 img {
   width: 166px;
   height: 118px;
+  transition: transform 0.2s; /* Animation */
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .image-course .project-1 img:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .image-course .project-1 a {
+  text-decoration: underline;
+}
+.main-profile .profile-card .container-card .content-card-flex .text-content .image-course .project-1 a:hover {
+  color: #7d9d9c;
 }
 .main-profile .profile-card .container-card hr {
   margin-top: 50px;
   margin-bottom: 50px;
   border: 2px solid #bcbcbc;
+}
+
+.project-view .breadcrumb {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  font-size: 20px;
+}
+.project-view .breadcrumb li + li:before {
+  color: #7d9d9c;
+  content: "/ ";
+  font-weight: 600;
+}
+.project-view .breadcrumb a {
+  color: #bcbcbc;
+  text-decoration: none;
+}
+.project-view .breadcrumb a:hover {
+  color: #7d9d9c;
+  text-decoration: underline;
+}
+.project-view .breadcrumb .name-project {
+  font-weight: 600;
+  color: #7d9d9c;
 }
 
 /*# sourceMappingURL=main.css.map */

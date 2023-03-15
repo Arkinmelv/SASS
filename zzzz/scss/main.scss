@@ -821,6 +821,25 @@ button {
           }
         }
         .profile-button {
+          display: flex;
+          gap: 24px;
+
+          .button-icon {
+            button {
+              width: 236px;
+              height: 62px;
+              font-weight: 600;
+            }
+            .cv {
+              width: 295px;
+            }
+            .text-button {
+              img {
+                margin-right: 16px;
+              }
+              border-radius: 8px;
+            }
+          }
         }
       }
     }
@@ -843,78 +862,128 @@ button {
       //about me
       .text-card {
         margin-top: 32px;
-        .text-about{
+        .text-about {
           text-align: justify;
         }
       }
-      
+
       //Penglamanan
-      .content-card-flex{
+      .content-card-flex {
         display: flex;
         margin-top: 50px;
-        .image-content{
+        .image-content {
           margin-right: 24px;
-          img{
+          img {
             width: 100px;
             height: 100px;
           }
         }
-        .text-content{
+        .text-content {
           display: flex;
           flex-direction: column;
-          h4{
+          h4 {
             font-weight: 600;
           }
-          h5{
+          h5 {
             margin-top: 4px;
           }
-          .body-text-4{
+          .body-text-4 {
             font-weight: 300;
             margin-top: 8px;
           }
-          .number{
+          .semi-bold {
+            font-weight: 400;
+            margin-top: 16px;
+            margin-bottom: 20px;
+          }
+          .number {
             font-weight: 400;
           }
-          .desc-text{
+          .desc-text {
             margin-top: 32px;
             display: flex;
             gap: 16px;
             flex-direction: column;
             margin-left: 32px;
-            li{
+            li {
               font-weight: 300;
             }
           }
-          .link-project{
+          .link-project {
             display: flex;
             margin-top: 8px;
             margin-bottom: 20px;
-            p{
+            p {
               font-size: 20px;
               color: $gray;
+              margin-right: 8px;
             }
-            img{
+            img {
+              margin-top: 2px;
               width: 24px;
               height: 24px;
             }
           }
-          .image-course{
+          .image-course {
             display: flex;
             gap: 32px;
-            .project-1{
-              img{
+            .project-1 {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              img {
                 width: 166px;
                 height: 118px;
+                transition: transform 0.2s; /* Animation */
+              }
+              img:hover {
+                transform: scale(
+                  1.5
+                ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+              }
+              a {
+                text-decoration: underline;
+              }
+              a:hover {
+                color: $secondary-color;
               }
             }
           }
-        }  
+        }
       }
-      hr{
+      hr {
         margin-top: 50px;
         margin-bottom: 50px;
         border: 2px solid $gray;
       }
+    }
+  }
+}
+
+.project-view {
+  .breadcrumb {
+    display: flex;
+    gap: 8px;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 20px;
+    li + li:before {
+      color: $secondary-color;
+      content: "/\00a0";
+      font-weight: 600;
+    }
+    a {
+      color: $gray;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+    .name-project{
+      font-weight: 600;
+      color: $secondary-color;
     }
   }
 }
