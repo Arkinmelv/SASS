@@ -12,24 +12,26 @@
 
 <body>
     <div class="container">
-        <nav class="navbar">
+        <div class="navbar">
             <div class="navbar-image">
                 <a href=""><img src="image/AMD.svg" alt="logo"></a>
             </div>
-            <div class="navbar-content">
-                <h5 class=""><a href="index.html">Home</a></h5>
-                <h5 class=""><a href="profile.html">Profile</a></h5>
-                <h5 class=""><a href="project.html">Project</a></h5>
+            <nav>             
+                <ul class="nav-list">
+                    <li><a class="mr-32" href="index.html"><h5>Home</h5></a></li>
+                    <li><a class="mr-32" href="profile.html"><h5>Profile</h5></a></li>
+                    <li><a href="project.html"><h5>Project</h5></a></li>
+                </ul>
+            </nav>
+            <div class="nav-mobile">
+                <a id="nav-toggle" href="#!"><span></span></a>
             </div>
             <div class="button navbar-button">
                 <a href="contact.html"><button>Contact me</button></a>
             </div>
-            <!-- <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> -->
-        </nav>
+
+            
+        </div>
         <div class="wrapper-contact">
             <div class="title-contact">
                 <h2>Contact me</h2>
@@ -100,6 +102,8 @@
 
 </body>
 <script src="index.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 
 </html>

@@ -17,24 +17,30 @@
 
 <body>
     <div class="container-project">
-        <nav class="container navbar">
+        <div class="container navbar">
             <div class="navbar-image">
                 <a href=""><img src="image/AMD.svg" alt="logo"></a>
             </div>
-            <div class="navbar-content">
-                <h5 class=""><a href="index.html">Home</a></h5>
-                <h5 class=""><a href="profile.html">Profile</a></h5>
-                <h5 class="active"><a href="project.html">Project</a></h5>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="mr-32" href="index.html">
+                            <h5>Home</h5>
+                        </a></li>
+                    <li><a class="mr-32" href="profile.html">
+                            <h5>Profile</h5>
+                        </a></li>
+                    <li><a class="active" href="project.html">
+                            <h5>Project</h5>
+                        </a></li>
+                </ul>
+            </nav>
+            <div class="nav-mobile">
+                <a id="nav-toggle" href="#!"><span></span></a>
             </div>
             <div class="button navbar-button">
                 <a href="contact.html"><button>Contact me</button></a>
             </div>
-            <!-- <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> -->
-        </nav>
+        </div>
         <div class="hero-banner-porto">
             <div class="text-title">
                 <h5>OUR PROJECT</h5>
@@ -47,7 +53,7 @@
         </div>
         <div class="container hero-content-project">
             <div class="wrapper-content-project">
-                <div class="title-content">
+                <div class="container title-content">
                     <h1>UI/UX Designer </h1>
                     <p class="body-text-4 text-title">We have knowlage to make Small and Big project, <br>
                         We use many technology but we prefer <br>
@@ -141,7 +147,7 @@
         </div>
         <div class="container hero-content-project">
             <div class="wrapper-content-project">
-                <div class="title-content">
+                <div class="container title-content">
                     <h1>Frontend Developer</h1>
                     <p class="body-text-4 text-title">I’m have a experrience on Startup Fintech, and make UI Website.
                         <br>
@@ -237,7 +243,7 @@
         </div>
         <div class="container hero-content-project">
             <div class="wrapper-content-project">
-                <div class="title-content">
+                <div class="container title-content">
                     <h1>Network Engginer</h1>
                     <p class="body-text-4 text-title">I’m have a experience to make network for Corporate<br>
                         user and we can make your network stability<br>
@@ -331,7 +337,7 @@
         </div>
         <div class="container hero-content-project">
             <div class="wrapper-content-project">
-                <div class="title-content">
+                <div class="container title-content">
                     <h1>Mobile Developer</h1>
                     <p class="body-text-4 text-title">Im still study to make mobile application, <br>
                         We use dart langue and flutter framework i’m still<br>
@@ -421,7 +427,6 @@
                         </ul>
                     </div>
                 </section>
-
             </div>
         </div>
 
@@ -457,6 +462,8 @@
             rewind: true,
             type: 'loop',
             padding: { right: '2rem' },
+            width: '100%',
+            gap: 24,
             breakpoints: {
                 640: {
                     perPage: 1,
@@ -478,6 +485,8 @@
             rewind: true,
             type: 'loop',
             padding: { right: '2rem' },
+            width: '100%',
+            gap: 24,
             breakpoints: {
                 640: {
                     perPage: 1,
@@ -499,6 +508,8 @@
             rewind: true,
             type: 'loop',
             padding: { right: '2rem' },
+            width: '100%',
+            gap: 24,
             breakpoints: {
                 640: {
                     perPage: 1,
@@ -520,6 +531,8 @@
             rewind: true,
             type: 'loop',
             padding: { right: '2rem' },
+            width: '100%',
+            gap: 24,
             breakpoints: {
                 640: {
                     perPage: 1,
@@ -536,6 +549,8 @@
     ;
 
 </script>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 
 </html>

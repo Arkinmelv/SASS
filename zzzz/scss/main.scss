@@ -14,9 +14,11 @@ $white-gray: #ededed;
 
 $bp: (
   mobile: 480px,
-  tablet: 768px,
+  tablet: 796px,
+  s-desktop: 1240px,
   desktop: 1440px,
 );
+$tablet: 796px;
 
 @mixin query($display) {
   @each $key, $value in $bp {
@@ -82,6 +84,10 @@ h1 {
 hr {
   margin-top: 70px;
   margin-bottom: 32px;
+}
+
+.mr-32 {
+  margin-right: 32px;
 }
 // ===============================
 // Buttons
@@ -210,6 +216,62 @@ button {
     max-width: 1320px;
   }
 }
+// ======
+
+.container-left,
+.container-left-fluid,
+.container-left-xxl,
+.container-left-xl,
+.container-left-lg,
+.container-left-md,
+.container-left-sm {
+  --bs-gutter-x: 1, 5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-left-sm,
+  .container-left {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-left-md,
+  .container-left-sm,
+  .container-left {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-left-lg,
+  .container-left-md,
+  .container-left-sm,
+  .container-left {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-left-xl,
+  .container-left-lg,
+  .container-left-md,
+  .container-left-sm,
+  .container-left {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-left-xxl,
+  .container-left-xl,
+  .container-left-lg,
+  .container-left-md,
+  .container-left-sm,
+  .container-left {
+    max-width: 1320px;
+  }
+}
 
 .themed-container {
   background-color: gray;
@@ -242,6 +304,14 @@ button {
       color: $primary-color;
       text-decoration: underline;
     }
+    h5 {
+      @include query(mobile) {
+        display: none;
+      }
+      @include query(tablet) {
+        display: none;
+      }
+    }
     @include query(mobile) {
       display: none;
     }
@@ -255,6 +325,124 @@ button {
     }
     @include query(tablet) {
       display: none;
+    }
+  }
+  .nav-mobile {
+    display: none;
+  }
+  #nav-toggle {
+    @include query(tablet) {
+      display: block;
+    }
+    cursor: pointer;
+    padding-right: 36px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    span,
+    span:before,
+    span:after {
+      cursor: pointer;
+      border-radius: 32px;
+      height: 5px;
+      width: 35px;
+      background: $primary-color;
+      position: absolute;
+      display: block;
+      content: "";
+      transition: all 300ms ease-in-out;
+    }
+    span:before {
+      top: -10px;
+    }
+    span:after {
+      bottom: -10px;
+    }
+    &.active span {
+      background-color: transparent;
+      &:before,
+      &:after {
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    .nav-list {
+      display: block !important;
+    }
+  }
+
+  nav {
+    float: right;
+    ul {
+      list-style: none;
+      li {
+        float: left;
+        a {
+          display: block;
+          text-decoration: none;
+        }
+        a:hover {
+          color: $primary-color;
+          text-decoration: underline;
+          font-weight: 700;
+        }
+        .active {
+          color: $primary-color;
+          text-decoration: underline;
+          font-weight: 700;
+        }
+        // Dropdown list
+        ul li {
+          min-width: 190px;
+          a {
+            padding: 15px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $tablet) {
+    .nav-mobile {
+      display: block;
+    }
+    nav {
+      width: 100%;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      ul {
+        display: none;
+        margin-top: 16px;
+        li {
+          float: none;
+          background-color: $primary-color;
+          width: 100%;
+          z-index: 9999;
+          a {
+            padding: 24px;
+            line-height: 20px;
+
+            &:hover::before {
+              width: 20%;
+            }
+            h5 {
+              color: $third-color;
+            }
+          }
+          ul li a {
+            padding-left: 30px;
+          }
+        }
+      }
     }
   }
 }
@@ -271,21 +459,35 @@ button {
     h3 {
       margin-top: 16px;
       color: $white;
+      @include query(s-desktop) {
+        font-size: 24px;
+      }
     }
     h5 {
       margin-top: 16px;
       color: $gray;
+      @include query(s-desktop) {
+        font-size: 16px;
+      }
     }
     button {
       margin-top: 40px;
       background-color: $white;
       color: $primary-color;
+      @include query(s-desktop) {
+        font-size: 16px;
+        height: 32px;
+        width: 100px;
+      }
     }
     button:hover {
       background-color: $secondary-color;
       color: $white;
     }
     .footer-image {
+      @include query(s-desktop) {
+        flex-wrap: wrap;
+      }
       display: flex;
       justify-content: center;
       align-items: center;
@@ -298,12 +500,21 @@ button {
       display: flex;
       justify-content: space-between;
       margin-bottom: 32px;
+      flex-wrap: wrap;
+      @include query(mobile) {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
       p {
         color: $white;
       }
       .footer-sosmed {
         display: flex;
         gap: 16px;
+        @include query(mobile) {
+          margin-top: 32px;
+        }
       }
     }
   }
@@ -438,20 +649,43 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    @include query(mobile) {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    @include query(tablet) {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
     .hero-title {
       p {
         margin-bottom: 6px;
         color: $secondary-color;
+        @include query(mobile) {
+          text-align: center;
+        }
+        @include query(tablet) {
+          text-align: center;
+        }
       }
       h1 {
         margin-bottom: 32px;
         color: $primary-color;
+        @include query(mobile) {
+          text-align: center;
+        }
+        @include query(tablet) {
+          text-align: center;
+        }
       }
     }
 
     .hero-image {
       img {
-        width: 576px;
+        width: 100%;
         height: 432px;
       }
     }
@@ -463,8 +697,23 @@ button {
   margin-top: 200px;
   .wrapper-content-one {
     display: flex;
+    @include query(mobile) {
+      flex-wrap: wrap;
+    }
+    @include query(tablet) {
+      flex-wrap: wrap;
+    }
+    @include query(s-desktop) {
+      flex-wrap: wrap;
+    }
     .title-content {
       max-width: 70%;
+      @include query(mobile) {
+        max-width: 100%;
+      }
+      @include query(tablet) {
+        max-width: 100%;
+      }
       h5,
       h1 {
         font-weight: 600;
@@ -499,6 +748,15 @@ button {
       display: flex;
       flex-direction: column;
       gap: 32px;
+      @include query(mobile) {
+        margin-top: 32px;
+      }
+      @include query(tablet) {
+        margin-top: 32px;
+      }
+      @include query(s-desktop) {
+        margin-top: 32px;
+      }
       .wrapper-card {
         .card-profile {
           display: flex;
@@ -595,12 +853,29 @@ button {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include query(mobile) {
+        flex-wrap: wrap;
+      }
+      @include query(tablet) {
+        flex-wrap: wrap;
+      }
+      @include query(s-desktop) {
+        flex-wrap: wrap;
+      }
       img {
         width: 400px;
         height: 150px;
+        @include query(s-desktop) {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 32px;
+        }
       }
       h3 {
         font-weight: 700;
+        @include query(s-desktop) {
+          margin-bottom: 32px;
+        }
       }
     }
   }
@@ -775,8 +1050,8 @@ button {
       .splide__slide {
         .splide__slide__container {
           img {
-            width: 386px;
-            height: 386px;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -981,9 +1256,55 @@ button {
       color: $secondary-color;
       text-decoration: underline;
     }
-    .name-project{
+    .name-project {
       font-weight: 600;
       color: $secondary-color;
+    }
+  }
+}
+
+.hero-content-project-tes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  .wrapper-content-project {
+    .title-content {
+      // max-width: 70%;
+      h5,
+      h1 {
+        font-weight: 600;
+      }
+      h1 {
+        margin-bottom: 16px;
+      }
+      .text-title {
+        color: $gray;
+        font-weight: 400;
+        margin-bottom: 24px;
+      }
+      .content-text {
+        color: $secondary-color;
+      }
+    }
+    .wrapper-content-card {
+      margin-top: 64px;
+      .content-card {
+        display: flex;
+        justify-content: flex-start;
+        gap: 24px;
+        img {
+          width: 1800px;
+          height: 386px;
+        }
+      }
+    }
+    .button-content {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+      button {
+        width: 291px;
+      }
     }
   }
 }
