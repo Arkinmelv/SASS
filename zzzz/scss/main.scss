@@ -13,8 +13,11 @@ $gray: #bcbcbc;
 $white-gray: #ededed;
 
 $bp: (
+  s-mobile: 320px,
+  m-mobile: 375px,
   mobile: 480px,
   tablet: 796px,
+  m-tablet: 1024px,
   s-desktop: 1240px,
   desktop: 1440px,
 );
@@ -52,6 +55,11 @@ body {
   font-weight: 457;
   letter-spacing: 0em;
   font-variation-settings: "SOFT" 50, "WONK" 0.51;
+
+  // text size  h1
+  @include query(m-tablet) {
+    font-size: 64px;
+  }
 }
 h1 {
   font-size: 64px;
@@ -166,18 +174,37 @@ button {
 .container-xl,
 .container-lg,
 .container-md,
-.container-sm {
-  --bs-gutter-x: 1, 5rem;
-  --bs-gutter-y: 0;
+.container-s-md,
+.container-sm,
+.container-ssm {
+  $bs-gutter-x: 1.5rem;
+  $bs-gutter-y: 0;
+
+  // --bs-gutter-x: 1, 5rem;
+  // --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var($bs-gutter-x) * 0.5);
+  padding-left: calc(var($bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+}
+@media (min-width: 320px) {
+  .container-ssm,
+  .container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 540px) {
+  .container-ssm,
+  .container-s-md,
+  .container {
+    max-width: 480px;
+  }
 }
 
 @media (min-width: 576px) {
   .container-sm,
+  .container-ssm,
   .container {
     max-width: 540px;
   }
@@ -305,12 +332,18 @@ button {
       text-decoration: underline;
     }
     h5 {
+      @include query(s-mobile) {
+        display: none;
+      }
       @include query(mobile) {
         display: none;
       }
       @include query(tablet) {
         display: none;
       }
+    }
+    @include query(s-mobile) {
+      display: none;
     }
     @include query(mobile) {
       display: none;
@@ -649,17 +682,14 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    @include query(mobile) {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+    flex-wrap: nowrap;
     @include query(tablet) {
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       text-align: center;
     }
+
     .hero-title {
       p {
         margin-bottom: 6px;
@@ -810,6 +840,18 @@ button {
           img {
             width: 63px;
             height: 63px;
+            @include query(mobile) {
+              width: 40px;
+              height: 40px;
+            }
+            @include query(m-mobile) {
+              width: 40px;
+              height: 40px;
+            }
+            @include query(s-mobile) {
+              width: 40px;
+              height: 40px;
+            }
           }
         }
       }
@@ -855,12 +897,19 @@ button {
       justify-content: space-between;
       @include query(mobile) {
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
       @include query(tablet) {
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
       @include query(s-desktop) {
         flex-wrap: wrap;
+        
       }
       img {
         width: 400px;

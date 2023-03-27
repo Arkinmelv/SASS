@@ -16,6 +16,11 @@ body {
   letter-spacing: 0em;
   font-variation-settings: "SOFT" 50, "WONK" 0.51;
 }
+@media (max-width: 1024px) {
+  .h1 {
+    font-size: 64px;
+  }
+}
 
 h1 {
   font-size: 64px;
@@ -158,18 +163,32 @@ button:hover {
 .container-xl,
 .container-lg,
 .container-md,
-.container-sm {
-  --bs-gutter-x: 1, 5rem;
-  --bs-gutter-y: 0;
+.container-s-md,
+.container-sm,
+.container-ssm {
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(1.5rem) * 0.5);
+  padding-left: calc(var(1.5rem) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
 
+@media (min-width: 320px) {
+  .container-ssm,
+  .container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 540px) {
+  .container-ssm,
+  .container-s-md,
+  .container {
+    max-width: 480px;
+  }
+}
 @media (min-width: 576px) {
   .container-sm,
+  .container-ssm,
   .container {
     max-width: 540px;
   }
@@ -292,6 +311,11 @@ button:hover {
   color: #576f72;
   text-decoration: underline;
 }
+@media (max-width: 320px) {
+  .navbar .navbar-content h5 {
+    display: none;
+  }
+}
 @media (max-width: 480px) {
   .navbar .navbar-content h5 {
     display: none;
@@ -299,6 +323,11 @@ button:hover {
 }
 @media (max-width: 796px) {
   .navbar .navbar-content h5 {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .navbar .navbar-content {
     display: none;
   }
 }
@@ -641,17 +670,11 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-}
-@media (max-width: 480px) {
-  .hero .hero-content {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  flex-wrap: nowrap;
 }
 @media (max-width: 796px) {
   .hero .hero-content {
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -822,6 +845,24 @@ button:hover {
   width: 63px;
   height: 63px;
 }
+@media (max-width: 480px) {
+  .hero-content-first .wrapper-content-two .wrapper-image .sosmed .sosmed-image img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 375px) {
+  .hero-content-first .wrapper-content-two .wrapper-image .sosmed .sosmed-image img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 320px) {
+  .hero-content-first .wrapper-content-two .wrapper-image .sosmed .sosmed-image img {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .hero-content-second {
   display: flex;
@@ -863,11 +904,17 @@ button:hover {
 @media (max-width: 480px) {
   .hero-content-second .wrapper-content-card .wrapper-card {
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 @media (max-width: 796px) {
   .hero-content-second .wrapper-content-card .wrapper-card {
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 @media (max-width: 1240px) {
