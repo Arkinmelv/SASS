@@ -81,11 +81,27 @@ h1 {
 @for $i from 2 through 6 {
   h#{$i} {
     font-size: $base-heading-size + $heading-scale * (6 - $i);
+    @include query(tablet) {
+      $base-heading-size: 10px;
+      $heading-scale: 8;
+      font-size: $base-heading-size + $heading-scale * (6 - $i);
+    }
+    @include query(mobile) {
+      $base-heading-size: 10px;
+      $heading-scale: 4;
+      font-size: $base-heading-size + $heading-scale * (6 - $i);
+    }
   }
 }
 @for $i from 1 through 6 {
   .body-text-#{$i} {
     font-size: $base-font-size + $font-scale * (6 - $i);
+    @include query(tablet) {
+      font-size: $base-font-size + $font-scale * (4 - $i);
+    }
+    @include query(mobile) {
+      font-size: $base-font-size + $font-scale * (2 - $i);
+    }
   }
 }
 
@@ -488,6 +504,9 @@ button {
   background-color: $primary-color;
   padding: 70px;
   margin-top: 120px;
+  @include query(m-desktop) {
+    font-size: 50px;
+  }
   & &-content {
     h3 {
       margin-top: 16px;
@@ -520,6 +539,11 @@ button {
     .footer-image {
       @include query(s-desktop) {
         flex-wrap: wrap;
+      }
+      @include query(s-desktop) {
+        img{
+          width: 80px;
+        }
       }
       display: flex;
       justify-content: center;
@@ -688,6 +712,7 @@ button {
       justify-content: center;
       align-items: center;
       text-align: center;
+      gap: 60px;
     }
 
     .hero-title {
@@ -717,6 +742,10 @@ button {
       img {
         width: 100%;
         height: 432px;
+        @include query(tablet) {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -744,18 +773,25 @@ button {
       @include query(tablet) {
         max-width: 100%;
       }
-      h5,
-      h1 {
+      h5 {
         font-weight: 600;
       }
       h1 {
+        font-weight: 600;
         margin-top: 8px;
         margin-bottom: 16px;
+        @include query(tablet) {
+          font-size: 40px;
+          max-width: 100%;
+        }
       }
       .text-title {
         color: $gray;
         font-weight: 400;
         margin-bottom: 24px;
+        @include query(tablet) {
+          font-size: 16px;
+        }
       }
       .content-text {
         color: $secondary-color;
@@ -817,7 +853,11 @@ button {
     .wrapper-image {
       img {
         width: 100%;
-        height: 348px;
+        height: 100%;
+        // @include query(m-tablet) {
+        //   width: 40px;
+        //   height: 40px;
+        // }
       }
       .sosmed {
         display: flex;
@@ -840,15 +880,7 @@ button {
           img {
             width: 63px;
             height: 63px;
-            @include query(mobile) {
-              width: 40px;
-              height: 40px;
-            }
-            @include query(m-mobile) {
-              width: 40px;
-              height: 40px;
-            }
-            @include query(s-mobile) {
+            @include query(m-tablet) {
               width: 40px;
               height: 40px;
             }
@@ -866,18 +898,28 @@ button {
   .wrapper-content-second {
     .title-content {
       max-width: 70%;
-      h5,
-      h1 {
+      @include query(tablet) {
+        max-width: 100%;
+      }
+      h5 {
         font-weight: 600;
       }
       h1 {
+        font-weight: 600;
         margin-top: 8px;
         margin-bottom: 16px;
+        @include query(tablet) {
+          font-size: 40px;
+          max-width: 100%;
+        }
       }
       .text-title {
         color: $gray;
         font-weight: 400;
         margin-bottom: 24px;
+        @include query(tablet) {
+          font-size: 16px;
+        }
       }
       .content-text {
         color: $secondary-color;
@@ -909,7 +951,6 @@ button {
       }
       @include query(s-desktop) {
         flex-wrap: wrap;
-        
       }
       img {
         width: 400px;
@@ -937,18 +978,28 @@ button {
   .wrapper-content-third {
     .title-content {
       max-width: 70%;
-      h5,
-      h1 {
+      @include query(tablet) {
+        max-width: 100%;
+      }
+      h5 {
         font-weight: 600;
       }
       h1 {
+        font-weight: 600;
         margin-top: 8px;
         margin-bottom: 16px;
+        @include query(tablet) {
+          font-size: 40px;
+          max-width: 100%;
+        }
       }
       .text-title {
         color: $gray;
         font-weight: 400;
         margin-bottom: 24px;
+        @include query(tablet) {
+          font-size: 16px;
+        }
       }
       .content-text {
         color: $secondary-color;
@@ -1114,11 +1165,18 @@ button {
     .profile-banner {
       img {
         width: 100%;
-        height: 480px;
+        height: 100%;
       }
     }
     .profile-content-image {
       display: flex;
+      @include query(m-tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
       .profile-photo {
         position: absolute;
         margin-top: -200px;
@@ -1127,10 +1185,35 @@ button {
           width: 387px;
           height: 387px;
         }
+        @include query(m-tablet) {
+          position: static;
+          margin-top: -150px;
+          img {
+            width: 287px;
+            height: 287px;
+          }
+        }
+        @include query(tablet) {
+          position: static;
+          margin-top: -80px;
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
       }
       .profile-name {
         margin-top: 40px;
         margin-left: 420px;
+        @include query(m-tablet) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          position: relative;
+          margin-left: 0 !important;
+        }
         h2 {
           margin-bottom: 8px;
         }
@@ -1146,20 +1229,39 @@ button {
         }
         .profile-button {
           display: flex;
+          flex-wrap: wrap;
           gap: 24px;
+          @include query(m-tablet) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
+            gap: 16px;
+          }
           .button-icon {
             button {
-              width: 236px;
+              width: 295px;
               height: 62px;
               font-weight: 600;
+              @include query(m-tablet) {
+                width: 195px;
+                height: 42px;
+                font-size: 16px;
+              }
             }
             .cv {
               width: 295px;
+              @include query(m-tablet) {
+                width: 195px;
+              }
             }
             .text-button {
               img {
                 margin-right: 16px;
+                @include query(m-tablet) {
+                  width: 18px;
+                  height: 18px;
+                }
               }
               border-radius: 8px;
             }
@@ -1179,6 +1281,12 @@ button {
       padding-bottom: 40px;
       padding-left: 64px;
       padding-right: 64px;
+      @include query(m-tablet) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
       .title-card {
         font-weight: 600;
       }
@@ -1188,6 +1296,9 @@ button {
         margin-top: 32px;
         .text-about {
           text-align: justify;
+          @include query(mobile) {
+            font-size: 12px;
+          }
         }
       }
 
@@ -1195,11 +1306,26 @@ button {
       .content-card-flex {
         display: flex;
         margin-top: 50px;
+        @include query(m-tablet) {
+          margin-top: 32px;
+        }
         .image-content {
           margin-right: 24px;
+          @include query(m-tablet) {
+            margin-top: 10px;
+            margin-right: 16px;
+          }
           img {
             width: 100px;
             height: 100px;
+            @include query(m-tablet) {
+              width: 50px;
+              height: 50px;
+            }
+            @include query(mobile) {
+              width: 40px;
+              height: 40px;
+            }
           }
         }
         .text-content {
@@ -1229,6 +1355,14 @@ button {
             gap: 16px;
             flex-direction: column;
             margin-left: 32px;
+            @include query(m-tablet) {
+              margin-top: 20px;
+              margin-left: 16px;
+              gap: 10px;
+              .body-text-4 {
+                margin-top: 0px;
+              }
+            }
             li {
               font-weight: 300;
             }
@@ -1250,6 +1384,7 @@ button {
           }
           .image-course {
             display: flex;
+            flex-wrap: wrap;
             gap: 32px;
             .project-1 {
               display: flex;
