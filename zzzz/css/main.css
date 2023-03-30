@@ -763,7 +763,7 @@ button:hover {
 }
 .form .button-form {
   height: 62px;
-  width: 445px;
+  width: 100%;
   border-radius: 16px;
   padding: 16px 32px 16px 32px;
   margin-top: 64px;
@@ -774,8 +774,14 @@ button:hover {
   width: 100%;
   gap: 32px;
 }
+@media (max-width: 480px) {
+  .form-contact {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .form-contact .form-control {
-  width: 50%;
+  width: 100%;
 }
 
 .hero {
@@ -1169,6 +1175,21 @@ button:hover {
   right: 0;
   margin-top: 20vh;
 }
+@media (max-width: 1024px) {
+  .hero-banner-porto .text-title {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 796px) {
+  .hero-banner-porto .text-title {
+    margin-top: 90px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-banner-porto .text-title {
+    margin-top: 40px;
+  }
+}
 .hero-banner-porto .text-title h5 {
   color: #ffffff;
 }
@@ -1183,13 +1204,53 @@ button:hover {
 .hero-banner-porto .text-title h1 .text-span {
   color: #dcb21d;
 }
+@media (max-width: 1024px) {
+  .hero-banner-porto .text-title h1 {
+    font-size: 64px;
+    line-height: 90px;
+  }
+}
+@media (max-width: 796px) {
+  .hero-banner-porto .text-title h1 {
+    font-size: 50px;
+    line-height: 80px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-banner-porto .text-title h1 {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
 .hero-banner-porto .text-title h4 {
   color: #bcbcbc;
   font-style: italic;
   line-height: 39px;
 }
+@media (max-width: 1024px) {
+  .hero-banner-porto .text-title h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 796px) {
+  .hero-banner-porto .text-title h4 {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-banner-porto .text-title h4 {
+    font-size: 9px;
+    line-height: 24px;
+  }
+}
 .hero-banner-porto img {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -1198,17 +1259,45 @@ button:hover {
   flex-direction: column;
   margin-top: 200px;
 }
-.hero-content-project .wrapper-content-project .title-content h5,
-.hero-content-project .wrapper-content-project .title-content h1 {
+@media (max-width: 796px) {
+  .hero-content-project {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-content-project {
+    margin-top: 64px;
+  }
+}
+@media (max-width: 796px) {
+  .hero-content-project .wrapper-content-project .title-content {
+    max-width: 100%;
+  }
+}
+.hero-content-project .wrapper-content-project .title-content h5 {
   font-weight: 600;
 }
 .hero-content-project .wrapper-content-project .title-content h1 {
+  font-weight: 600;
+  margin-top: 8px;
   margin-bottom: 16px;
+}
+@media (max-width: 796px) {
+  .hero-content-project .wrapper-content-project .title-content h1 {
+    font-size: 40px;
+    max-width: 100%;
+  }
 }
 .hero-content-project .wrapper-content-project .title-content .text-title {
   color: #bcbcbc;
   font-weight: 400;
   margin-bottom: 24px;
+  max-width: 70%;
+}
+@media (max-width: 796px) {
+  .hero-content-project .wrapper-content-project .title-content .text-title {
+    font-size: 16px;
+  }
 }
 .hero-content-project .wrapper-content-project .title-content .content-text {
   color: #7d9d9c;
@@ -1499,10 +1588,22 @@ button:hover {
   color: #bcbcbc;
   margin-right: 8px;
 }
+@media (max-width: 796px) {
+  .main-profile .profile-card .container-card .content-card-flex .text-content .link-project p {
+    font-size: 14px;
+  }
+}
 .main-profile .profile-card .container-card .content-card-flex .text-content .link-project img {
   margin-top: 2px;
   width: 24px;
   height: 24px;
+}
+@media (max-width: 796px) {
+  .main-profile .profile-card .container-card .content-card-flex .text-content .link-project img {
+    margin-top: 3px;
+    width: 12px;
+    height: 12px;
+  }
 }
 .main-profile .profile-card .container-card .content-card-flex .text-content .image-course {
   display: flex;
@@ -1599,6 +1700,67 @@ button:hover {
 }
 .hero-content-project-tes .wrapper-content-project .button-content button {
   width: 291px;
+}
+
+.container-project-view {
+  margin-top: 150px;
+}
+.container-project-view .content-project-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.container-project-view .content-project-view .image-title img {
+  border-radius: 16px;
+}
+.container-project-view .content-project-view .project-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container-project-view .content-project-view .project-title h1 {
+  color: #576f72;
+  font-weight: 600;
+}
+.container-project-view .content-project-view .project-title h5 {
+  color: #bcbcbc;
+  font-weight: 600;
+}
+.container-project-view .content-project-view .sosmed-image {
+  display: flex;
+  gap: 28px;
+}
+.container-project-view .content-project-view .sosmed-image img {
+  width: 38px;
+  height: 38px;
+}
+.container-project-view .content-project-view .desc-title p {
+  text-align: justify;
+}
+.container-project-view .content-project-view .ul-title {
+  margin-left: 16px;
+}
+.container-project-view .content-project-view .ul-title ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container-project-view .content-project-view .ul-title ul li {
+  font-weight: 300;
+}
+.container-project-view .button-project-view {
+  margin-top: 80px;
+}
+.container-project-view .button-project-view button {
+  padding: 16px 32px;
+  gap: 32px;
+  width: 239px;
+  height: 62px;
+  background: #576f72;
+  border-radius: 16px;
+}
+.container-project-view .button-project-view button:hover {
+  background-color: #7d9d9c;
 }
 
 /*# sourceMappingURL=main.css.map */

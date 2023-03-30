@@ -541,7 +541,7 @@ button {
         flex-wrap: wrap;
       }
       @include query(s-desktop) {
-        img{
+        img {
           width: 80px;
         }
       }
@@ -644,8 +644,6 @@ button {
       span {
         z-index: 1;
         position: absolute;
-        // width: 32px;
-
         display: flex;
         text-align: center;
         align-items: center;
@@ -682,10 +680,9 @@ button {
   }
   .button-form {
     height: 62px;
-    width: 445px;
+    width: 100%;
     border-radius: 16px;
     padding: 16px 32px 16px 32px;
-
     margin-top: 64px;
   }
 }
@@ -694,8 +691,12 @@ button {
   display: flex;
   width: 100%;
   gap: 32px;
+  @include query(mobile) {
+    flex-direction: column;
+    gap: 0;
+  }
   .form-control {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -871,7 +872,7 @@ button {
         z-index: 1;
         margin-left: 32px;
         margin-top: -137px;
-        
+
         @include query(tablet) {
           margin-top: -100px;
         }
@@ -1051,6 +1052,16 @@ button {
     left: 0;
     right: 0;
     margin-top: 20vh;
+
+    @include query(m-tablet) {
+      margin-top: 64px;
+    }
+    @include query(tablet) {
+      margin-top: 90px;
+    }
+    @include query(mobile) {
+      margin-top: 40px;
+    }
     h5 {
       color: $white;
     }
@@ -1059,21 +1070,48 @@ button {
       font-weight: 600;
       color: $white;
       line-height: 123.3px;
-
       margin-top: 32px;
       margin-bottom: 32px;
       .text-span {
         color: #dcb21d;
+      }
+      @include query(m-tablet) {
+        font-size: 64px;
+        line-height: 90px;
+      }
+      @include query(tablet) {
+        font-size: 50px;
+        line-height: 80px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      @include query(mobile) {
+        font-size: 24px;
+        line-height: 38px;
+        margin-top: 8px;
+        margin-bottom: 8px;
       }
     }
     h4 {
       color: $gray;
       font-style: italic;
       line-height: 39px;
+      @include query(m-tablet) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      @include query(tablet) {
+        font-size: 18px;
+        line-height: 32px;
+      }
+      @include query(mobile) {
+        font-size: 9px;
+        line-height: 24px;
+      }
     }
   }
   img {
-    height: 100vh;
+    height: 100%;
     width: 100%;
   }
 }
@@ -1082,20 +1120,38 @@ button {
   display: flex;
   flex-direction: column;
   margin-top: 200px;
+  @include query(tablet) {
+    margin-top: 100px;
+  }
+  @include query(mobile) {
+    margin-top: 64px;
+  }
   .wrapper-content-project {
     .title-content {
       // max-width: 70%;
-      h5,
-      h1 {
+      @include query(tablet) {
+        max-width: 100%;
+      }
+      h5 {
         font-weight: 600;
       }
       h1 {
+        font-weight: 600;
+        margin-top: 8px;
         margin-bottom: 16px;
+        @include query(tablet) {
+          font-size: 40px;
+          max-width: 100%;
+        }
       }
       .text-title {
         color: $gray;
         font-weight: 400;
         margin-bottom: 24px;
+        max-width: 70%;
+        @include query(tablet) {
+          font-size: 16px;
+        }
       }
       .content-text {
         color: $secondary-color;
@@ -1382,11 +1438,19 @@ button {
               font-size: 20px;
               color: $gray;
               margin-right: 8px;
+              @include query(tablet) {
+                font-size: 14px;
+              }
             }
             img {
               margin-top: 2px;
               width: 24px;
               height: 24px;
+              @include query(tablet) {
+                margin-top: 3px;
+                width: 12px;
+                height: 12px;
+              }
             }
           }
           .image-course {
@@ -1454,6 +1518,7 @@ button {
   }
 }
 
+// Project View
 .hero-content-project-tes {
   display: flex;
   flex-direction: column;
@@ -1496,6 +1561,71 @@ button {
       button {
         width: 291px;
       }
+    }
+  }
+}
+
+.container-project-view {
+  margin-top: 150px;
+  .content-project-view {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .image-title {
+      img {
+        border-radius: 16px;
+      }
+    }
+    .project-title {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      h1 {
+        color: $primary-color;
+        font-weight: 600;
+      }
+      h5 {
+        color: $gray;
+        font-weight: 600;
+      }
+    }
+    .sosmed-image {
+      display: flex;
+      gap: 28px;
+      img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    .desc-title {
+      p {
+        text-align: justify;
+      }
+    }
+    .ul-title {
+      margin-left: 16px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        li {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .button-project-view{
+    margin-top: 80px;
+    button {
+      padding: 16px 32px;
+      gap: 32px;
+      width: 239px;
+      height: 62px;
+      background: $primary-color;
+      border-radius: 16px;
+    }
+    button:hover{
+      background-color: $secondary-color;
     }
   }
 }
