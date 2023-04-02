@@ -1637,6 +1637,7 @@ button:hover {
 
 .project-view .breadcrumb {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 10px 16px;
   list-style: none;
@@ -1665,6 +1666,17 @@ button:hover {
   display: flex;
   flex-direction: column;
   margin-top: 200px;
+}
+@media (max-width: 796px) {
+  .hero-content-project-tes .wrapper-content-project .splide__arrow {
+    display: none !important;
+    width: 32px;
+    height: 32px;
+  }
+  .hero-content-project-tes .wrapper-content-project .splide__arrow svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 .hero-content-project-tes .wrapper-content-project .title-content h5,
 .hero-content-project-tes .wrapper-content-project .title-content h1 {
@@ -1713,6 +1725,12 @@ button:hover {
 .container-project-view .content-project-view .image-title img {
   border-radius: 16px;
 }
+@media (max-width: 480px) {
+  .container-project-view .content-project-view .image-title img {
+    width: 100px;
+    height: 100px;
+  }
+}
 .container-project-view .content-project-view .project-title {
   display: flex;
   flex-direction: column;
@@ -1722,12 +1740,23 @@ button:hover {
   color: #576f72;
   font-weight: 600;
 }
+@media (max-width: 796px) {
+  .container-project-view .content-project-view .project-title h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .container-project-view .content-project-view .project-title h1 {
+    font-size: 32px;
+  }
+}
 .container-project-view .content-project-view .project-title h5 {
   color: #bcbcbc;
   font-weight: 600;
 }
 .container-project-view .content-project-view .sosmed-image {
   display: flex;
+  flex-wrap: wrap;
   gap: 28px;
 }
 .container-project-view .content-project-view .sosmed-image img {
@@ -1758,6 +1787,11 @@ button:hover {
   height: 62px;
   background: #576f72;
   border-radius: 16px;
+}
+@media (max-width: 480px) {
+  .container-project-view .button-project-view button {
+    width: 100%;
+  }
 }
 .container-project-view .button-project-view button:hover {
   background-color: #7d9d9c;

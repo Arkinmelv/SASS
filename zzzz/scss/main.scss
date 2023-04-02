@@ -1493,6 +1493,7 @@ button {
 .project-view {
   .breadcrumb {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     padding: 10px 16px;
     list-style: none;
@@ -1524,6 +1525,17 @@ button {
   flex-direction: column;
   margin-top: 200px;
   .wrapper-content-project {
+    .splide__arrow{
+      @include query(tablet) {
+        display: none !important;
+        width: 32px;
+        height: 32px;
+        svg{
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
     .title-content {
       // max-width: 70%;
       h5,
@@ -1574,6 +1586,10 @@ button {
     .image-title {
       img {
         border-radius: 16px;
+        @include query(mobile) {
+          width: 100px;
+          height: 100px;
+        }
       }
     }
     .project-title {
@@ -1583,6 +1599,12 @@ button {
       h1 {
         color: $primary-color;
         font-weight: 600;
+        @include query(tablet) {
+          font-size: 40px;
+        }
+        @include query(mobile) {
+          font-size: 32px;
+        }
       }
       h5 {
         color: $gray;
@@ -1591,6 +1613,7 @@ button {
     }
     .sosmed-image {
       display: flex;
+      flex-wrap: wrap;
       gap: 28px;
       img {
         width: 38px;
@@ -1623,6 +1646,9 @@ button {
       height: 62px;
       background: $primary-color;
       border-radius: 16px;
+      @include query(mobile) {
+        width: 100%;
+      }
     }
     button:hover{
       background-color: $secondary-color;
