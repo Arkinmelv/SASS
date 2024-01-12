@@ -1,0 +1,19 @@
+.container {
+  width: auto;
+  margin-left: 116px;
+  margin-right: 116px;
+  max-width: 1440px;
+}
+.container header div a {
+  font-size: 16px;
+}
+.container .hero h1 {
+  font-size: 64px;
+  color: teal;
+}
+.container .footer-image a {
+  font-size: 24px;
+}
+.container .footer-footer-title a, .container .footer-footer-title p {
+  font-size: 32px;
+}/*# sourceMappingURL=main.css.map */

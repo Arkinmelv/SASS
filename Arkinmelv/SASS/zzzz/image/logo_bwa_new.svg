@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="247px" height="247px" viewBox="0 0 247 247" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BWALogo-Copy-2" transform="translate(-42.000000, -42.000000)" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(42.000000, 42.000000)">
+                <circle id="Oval" fill="#335EF7" cx="123.5" cy="123.5" r="123.5"></circle>
+                <g id="Group" transform="translate(38.000000, 88.000000)" stroke="#FFFFFF" stroke-width="23">
+                    <path d="M75.4100732,53.0226526 C83.0055544,57.5006358 89.0333229,57.5006358 93.4933788,53.0226526 C102.260009,44.2207846 109.987558,28.7759404 116.676027,6.68812015 C119.664985,0.713879795 126.934071,-1.70765956 132.911986,1.27946062 C135.253972,2.44973344 137.15298,4.34757451 138.323973,6.68812015 L171,72" id="Path-Copy" stroke-dasharray="6"></path>
+                    <path d="M0,72 L32.676027,6.68812015 C35.6649846,0.713879795 42.9340713,-1.70765956 48.9119865,1.27946062 C51.2539718,2.44973344 53.1529803,4.34757451 54.323973,6.68812015 C66.0581622,31.5942598 74.3403606,48.8787106 79.1705684,58.5414723 C81.5676965,63.3368929 86.9493295,60.9680003 95.3154676,51.4347945" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
